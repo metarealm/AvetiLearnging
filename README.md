@@ -6,9 +6,7 @@
  ----------------------------------------------------------------- 
 
 
-Hi there! Welcome to AWS Cloud9!
-
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+Hi there! Welcome to AWS - Aveti learning Code base 
+This contains the code for the cloud formation , Lamda's , Api Gateway code to manage the aveti learning question answer seesions.
 
 Happy coding!
