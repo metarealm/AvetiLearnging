@@ -1,0 +1,8 @@
+# exclude venv directories
+*/venv/*
+
+# exclude .c9 directoy content
+.c9/*
+
+#exculde .debug directoies
+*/.debug/*
