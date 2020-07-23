@@ -15,7 +15,7 @@ Resources:
         LambdaMicroservice:
           Type: Api
           Properties:
-            Path: question/qustion2cache
+            Path: /avetiqna/questions/qustion2cache
             Method: POST
   postQustionCachePermission:
     Type: 'AWS::Lambda::Permission'

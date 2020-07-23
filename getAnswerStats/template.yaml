@@ -2,30 +2,30 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: An AWS Serverless Specification template describing your function.
 Resources:
-  makeQuesActive:
+  getAnswerStats:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: makeQuesActive/lambda_function.lambda_handler
+      Handler: getAnswerStats/lambda_function.lambda_handler
       Runtime: python3.6
       Description: ''
       MemorySize: 128
       Timeout: 15
-      Role: >-
-        arn:aws:iam::367197653860:role/cloud9-postQustionCache-postQustionCacheRole-EUKHDY9E5JEE
       CodeUri: .debug/
       Events:
         LambdaMicroservice:
           Type: Api
           Properties:
-            Path: /avetiqna/activequestion
-            Method: PUT
-  makeQuesActivePermission:
+            Path: /avetiqna/status
+            Method: GET
+      Role: >-
+        arn:aws:iam::367197653860:role/cloud9-postQustionCache-postQustionCacheRole-EUKHDY9E5JEE
+  getAnswerStatsPermission:
     Type: 'AWS::Lambda::Permission'
     Properties:
       Action: 'lambda:InvokeFunction'
       FunctionName:
         'Fn::GetAtt':
-          - makeQuesActive
+          - getAnswerStats
           - Arn
       Principal: apigateway.amazonaws.com
       SourceArn:

@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: An AWS Serverless Specification template describing your function.
 Resources:
-  makeQuesActive:
+  submitAnswers:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: makeQuesActive/lambda_function.lambda_handler
+      Handler: submitAnswers/lambda_function.lambda_handler
       Runtime: python3.6
       Description: ''
       MemorySize: 128
@@ -17,15 +17,15 @@ Resources:
         LambdaMicroservice:
           Type: Api
           Properties:
-            Path: /avetiqna/activequestion
-            Method: PUT
-  makeQuesActivePermission:
+            Path: /avetiqna/activequestion/answer
+            Method: ANY
+  submitAnswersPermission:
     Type: 'AWS::Lambda::Permission'
     Properties:
       Action: 'lambda:InvokeFunction'
       FunctionName:
         'Fn::GetAtt':
-          - makeQuesActive
+          - submitAnswers
           - Arn
       Principal: apigateway.amazonaws.com
       SourceArn:
