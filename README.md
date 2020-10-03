@@ -7,6 +7,6 @@
 
 
 Hi there! Welcome to AWS - Aveti learning Code base 
-This contains the code for the cloud formation , Lamda's , Api Gateway code to manage the aveti learning question answer sessions.
+This contains the code for the cloud formation , Lamda's , Api Gateway code to manage the aveti learning question answer seesions.
 
 Happy coding!
